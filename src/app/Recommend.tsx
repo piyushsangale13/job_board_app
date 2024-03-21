@@ -14,6 +14,9 @@ interface HomeProps {
   }
 export default function Home({logo, title, description, location, company, salary} : HomeProps) {
     const [showModal, setShowModal] = useState(false);
+    function handleClose(){
+        setShowModal(false);
+    }
     return (
         <div className='border-2 rounded-2xl h-64  w-80 p-8 space-y-3' onClick={()=>setShowModal(true)}>
             <Image className='rounded-full mb-8' src={logo} alt='' width={50} height={50}/>
@@ -22,7 +25,7 @@ export default function Home({logo, title, description, location, company, salar
             <div className='font-bold rounded-full border-2 border-gray-300  align-middle p-2  w-max'>{salary} per month</div>
             <Modal 
                 isVisible =  {showModal}
-                onClose = {()=> {setShowModal(false); return void 0;}}
+                onClose = {handleClose}
                 logo={logo}
                 title={title}
                 description = {description}

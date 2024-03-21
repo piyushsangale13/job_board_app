@@ -7,7 +7,7 @@ interface ModalProps {
     location: string;
     company: string;
     isVisible: boolean;
-    onClose: void
+    onClose: () => void
   }
 export default function Modal({isVisible, onClose, logo, title, description, location, company} : ModalProps) {
     function handleClick(){
