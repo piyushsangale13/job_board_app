@@ -1,8 +1,8 @@
 "use client";
-import Suggested from "./Suggested";
-import SearchBar from "./SearchBar";
-import Recommended from "./Recommended";
-import Modal from "./Modal";
+import Suggested from "./components/Suggested";
+import SearchBar from "./components/SearchBar";
+import Recommended from "./components/Recommended";
+import Modal from "./components/Modal";
 import React from "react";
 import { useState } from "react";
 export default function Home() {

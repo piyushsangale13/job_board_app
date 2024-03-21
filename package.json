@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:client": "next build",
+    "start:server": "node server/server.js",
+    "start:both": "concurrently \"npm run build:client\" \"npm run start:server\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -14,6 +18,8 @@
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
     "@vercel/postgres": "^0.7.2",
+    "axios": "^1.6.8",
+    "express": "^4.19.1",
     "next": "14.1.4",
     "pg": "^8.11.3",
     "react": "^18",
