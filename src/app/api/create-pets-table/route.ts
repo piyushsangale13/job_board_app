@@ -11,8 +11,7 @@ export async function GET(request: Request) {
         location VARCHAR(255) NOT NULL,
         type VARCHAR(255) NOT NULL
       );`;
-      
-    return NextResponse.json({ result }, { status: 200 });
+    return NextResponse.json({ result}, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error }, { status: 500 });
   }

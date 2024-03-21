@@ -1,10 +1,8 @@
-// server/server.ts
-
 import express from 'express';
 import bodyParser from 'body-parser';
 import axios from 'axios';
 import { sql } from '@vercel/postgres';
-import { router } from './routes';
+// import { router } from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -12,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 
 const pool = sql.createPool({
-  connectionString: process.env.POSTGRES_URL,
+  connectionString: "postgres://default:Lk2Dasu1zwOp@ep-royal-fire-a1vi9rtl-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require",
   max: 5,
   min: 1,
   acquire: 30000,

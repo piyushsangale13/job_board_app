@@ -1,6 +1,4 @@
-// server/controllers/jobController.ts
-// src\app\interfaces\job.interface.ts
-// import { Job } from '...src/app/interfaces/job.interface.ts';
+
 import { v4 as uuidv4 } from 'uuid';
 import { readFileSync, writeFileSync } from 'fs';
 import express from 'express';
